@@ -1,0 +1,10 @@
+FUNCTION isPalindrome(mot: STRING) : BOOLEAN
+BEGIN
+    IF LENGTH(mot) <= 1 THEN
+        RETURN TRUE
+    ELSE IF mot[1] = mot[LENGTH(mot)] THEN
+        RETURN isPalindrome(SUBSTR(mot, 2, LENGTH(mot) - 2))
+    ELSE
+        RETURN FALSE
+    END IF
+END
